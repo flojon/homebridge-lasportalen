@@ -1,0 +1,16 @@
+{
+  "name": "homebridge-lasportalen",
+  "version": "1.0.0",
+  "description": "Homebridge plugin for Digital Låssmed Låsportalen",
+  "main": "index.js",
+  "keywords": [
+    "homebridge-plugin"
+  ],
+  "engines": {
+    "homebridge": ">=1.6.0",
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.7.0"
+  }
+}
