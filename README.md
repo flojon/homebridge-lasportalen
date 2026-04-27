@@ -56,14 +56,36 @@ homebridge -P /path/to/homebridge-lasportalen
 
 ## Raspberry Pi
 
-Recommended setup for always-on use. Install Node.js, clone the repo, and configure Homebridge as a systemd service:
+Recommended setup for always-on use.
 
 ```bash
+# Install Node.js and Homebridge
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo apt install -y nodejs
+npm install -g homebridge
+
+# Clone and link the plugin
+git clone https://github.com/flojon/homebridge-lasportalen
+cd homebridge-lasportalen
+npm install
+npm link
+
+# Create your config at ~/.homebridge/config.json (see above)
+
+# Install and enable the systemd service
+sudo cp homebridge.service /etc/systemd/system/
+sudo systemctl daemon-reload
 sudo systemctl enable homebridge
 sudo systemctl start homebridge
 ```
 
-See the [official Homebridge Raspberry Pi guide](https://github.com/homebridge/homebridge/wiki/Install-Homebridge-on-Raspbian) for full instructions.
+Check logs with:
+
+```bash
+sudo journalctl -u homebridge -f
+```
+
+> **Note:** The service file assumes the default `pi` user and that the plugin is cloned to `/home/pi/homebridge-lasportalen`. Adjust if needed.
 
 ## API
 

@@ -1,0 +1,14 @@
+[Unit]
+Description=Homebridge Låsportalen
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=pi
+ExecStart=/usr/bin/homebridge -P /home/pi/homebridge-lasportalen
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
