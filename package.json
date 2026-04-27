@@ -1,12 +1,27 @@
 {
   "name": "homebridge-lasportalen",
+  "displayName": "Låsportalen",
   "version": "1.0.0",
   "description": "Homebridge plugin for Digital Låssmed Låsportalen",
   "main": "index.js",
-  "keywords": [
-    "homebridge-plugin"
-  ],
+  "author": "Jonas Flodén",
   "license": "MIT",
+  "homepage": "https://github.com/flojon/homebridge-lasportalen#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/flojon/homebridge-lasportalen.git"
+  },
+  "bugs": {
+    "url": "https://github.com/flojon/homebridge-lasportalen/issues"
+  },
+  "keywords": [
+    "homebridge-plugin",
+    "homebridge",
+    "lasportalen",
+    "digital-lassmed",
+    "lock",
+    "homekit"
+  ],
   "engines": {
     "homebridge": ">=1.6.0",
     "node": ">=18.0.0"

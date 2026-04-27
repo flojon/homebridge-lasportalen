@@ -1,0 +1,33 @@
+{
+  "pluginAlias": "LasPortalen",
+  "pluginType": "platform",
+  "singular": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "title": "Name",
+        "type": "string",
+        "default": "Låsportalen",
+        "required": true
+      },
+      "email": {
+        "title": "Email",
+        "type": "string",
+        "format": "email",
+        "required": true
+      },
+      "password": {
+        "title": "Password",
+        "type": "string",
+        "required": true
+      },
+      "organisationId": {
+        "title": "Organisation ID",
+        "type": "integer",
+        "required": true,
+        "description": "Your BRF/organisation ID in Låsportalen"
+      }
+    }
+  }
+}
