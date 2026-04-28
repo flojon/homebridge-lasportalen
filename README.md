@@ -87,6 +87,10 @@ sudo journalctl -u homebridge -f
 
 > **Note:** The service file assumes the default `pi` user and that the plugin is cloned to `/home/pi/homebridge-lasportalen`. Adjust if needed.
 
+## Disclaimer
+
+This plugin uses the **unofficial, undocumented** Låsportalen REST API. It is not affiliated with or endorsed by Digital Låssmed. The API may change without notice and break this plugin at any time.
+
 ## API
 
 The plugin uses the private Låsportalen REST API at `api.digitallassmed.se`:
