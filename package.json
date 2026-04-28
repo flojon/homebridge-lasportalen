@@ -1,7 +1,7 @@
 {
   "name": "homebridge-lasportalen",
   "displayName": "Låsportalen",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Homebridge plugin for Digital Låssmed Låsportalen",
   "main": "index.js",
   "author": "Jonas Flodén",
