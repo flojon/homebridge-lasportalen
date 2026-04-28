@@ -1,5 +1,9 @@
 # homebridge-lasportalen
 
+[![npm](https://img.shields.io/npm/v/homebridge-lasportalen)](https://www.npmjs.com/package/homebridge-lasportalen)
+[![npm](https://img.shields.io/npm/dt/homebridge-lasportalen)](https://www.npmjs.com/package/homebridge-lasportalen)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 Homebridge plugin for [Digital Låssmed](https://digitallassmed.se) Låsportalen. Exposes your accessible locks as HomeKit `LockMechanism` accessories.
 
 ## Features
@@ -11,11 +15,7 @@ Homebridge plugin for [Digital Låssmed](https://digitallassmed.se) Låsportalen
 ## Installation
 
 ```bash
-npm install -g homebridge
-git clone https://github.com/flojon/homebridge-lasportalen
-cd homebridge-lasportalen
-npm install
-npm link
+npm install -g homebridge homebridge-lasportalen
 ```
 
 ## Configuration
@@ -46,33 +46,22 @@ Add the platform to `~/.homebridge/config.json`:
 |---|---|
 | `email` | Your Låsportalen login email |
 | `password` | Your Låsportalen password |
-| `organisationId` | Your BRF/organisation ID (found in your account JWT) |
-
-## Running
-
-```bash
-homebridge -P /path/to/homebridge-lasportalen
-```
+| `organisationId` | Your BRF/organisation ID |
 
 ## Raspberry Pi
 
 Recommended setup for always-on use.
 
 ```bash
-# Install Node.js and Homebridge
+# Install Node.js, Homebridge and the plugin
 curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt install -y nodejs
-npm install -g homebridge
-
-# Clone and link the plugin
-git clone https://github.com/flojon/homebridge-lasportalen
-cd homebridge-lasportalen
-npm install
-npm link
+npm install -g homebridge homebridge-lasportalen
 
 # Create your config at ~/.homebridge/config.json (see above)
 
 # Install and enable the systemd service
+curl -O https://raw.githubusercontent.com/flojon/homebridge-lasportalen/main/homebridge.service
 sudo cp homebridge.service /etc/systemd/system/
 sudo systemctl daemon-reload
 sudo systemctl enable homebridge
@@ -85,7 +74,7 @@ Check logs with:
 sudo journalctl -u homebridge -f
 ```
 
-> **Note:** The service file assumes the default `pi` user and that the plugin is cloned to `/home/pi/homebridge-lasportalen`. Adjust if needed.
+> **Note:** The service file assumes the default `pi` user. Adjust `User=` in the service file if needed.
 
 ## Disclaimer
 

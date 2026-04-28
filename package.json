@@ -9,7 +9,7 @@
   "homepage": "https://github.com/flojon/homebridge-lasportalen#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/flojon/homebridge-lasportalen.git"
+    "url": "git+https://github.com/flojon/homebridge-lasportalen.git"
   },
   "bugs": {
     "url": "https://github.com/flojon/homebridge-lasportalen/issues"
